@@ -4,20 +4,16 @@ using UnityEngine;
 
 public class CameraControl : MonoBehaviour
 {
-    [SerializeField]
+    [SerializeField] float cameraSpeed = 20f;
     Camera attachedCamera;
-    [SerializeField]
-    float cameraSpeed = 20f;
-    
-    private Vector2 moveVelocity;
+    [SerializeField] int Y;
+    [SerializeField] int X;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         attachedCamera = GetComponent<Camera>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         CameraMovement();
@@ -25,10 +21,7 @@ public class CameraControl : MonoBehaviour
 
     void CameraMovement()
     {
-        //so the code here basically states when the 'horizontal' binded keys are pressed the input is equal to -1 (left) and 1 (right).
-        //ditto for the 'vertical input, they're pushing the player component up or down, left or right.
-        Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        moveVelocity = moveInput.normalized * cameraSpeed;
-        //MyPlayer.Move(moveInput);
+        attachedCamera.transform.position += new Vector3(Input.GetAxisRaw("Horizontal") * Time.deltaTime * cameraSpeed, Input.GetAxisRaw("Vertical") * Time.deltaTime * cameraSpeed);
+        attachedCamera.transform.position = new Vector3(Mathf.Clamp(transform.position.x, -X, X), Mathf.Clamp(transform.position.y, -Y, Y));
     }
 }

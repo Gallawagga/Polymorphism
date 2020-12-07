@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Imported/Scenes/Splash Screen/SplashScreen.unity
+    guid: 1ea028f1789ee4e42944029e0e2cba58
+  - enabled: 1
+    path: Assets/Scenes/FishPolymorphism.unity
+    guid: d3d1a597956569643af13147d5d28ad2
   m_configObjects: {}

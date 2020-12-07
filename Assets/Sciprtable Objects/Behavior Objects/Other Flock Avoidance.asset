@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f5a33c2acc6e0a46b8c6ea50c06e260, type: 3}
+  m_Name: Other Flock Avoidance
+  m_EditorClassIdentifier: 
+  filter: {fileID: 11400000, guid: 73d9584bb3865084398cf2393b65e834, type: 2}
